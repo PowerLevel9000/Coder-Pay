@@ -1,0 +1,7 @@
+$primary-color: #3778c2;   // skyblue
+$secondary-color: #5fb523; // light green
+$primary-text-color: #434b54; // primary text color
+
+$primary-text-shade-light: lighten($primary-text-color, 20%);
+$primary-text-shade-medium: $primary-text-color;
+$primary-text-shade-dark: darken($primary-text-color, 20%);
