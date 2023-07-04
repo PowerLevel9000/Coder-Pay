@@ -1,4 +1,4 @@
 class Expense < ApplicationRecord
   belongs_to :author, class_name: "User", foreign_key: :author_id
-  has_many :groups, class_name: "Group", foreign_key: :group_id
+  has_and_belongs_to_many :groups, join_table: "expenses_groups"
 end
