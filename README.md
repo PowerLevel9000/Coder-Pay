@@ -1,5 +1,7 @@
 # README
 
+[![Linters](https://github.com/PowerLevel9000/Coder-Pay/actions/workflows/linters.yml/badge.svg)](https://github.com/PowerLevel9000/Coder-Pay/actions/workflows/linters.yml)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
