@@ -8,4 +8,14 @@ class Group < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  # methods
+
+  def group_expense
+    total = 0
+    self.expenses.each do |expense|
+      total += expense.amount
+    end
+    total
+  end
 end
