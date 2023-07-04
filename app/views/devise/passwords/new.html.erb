@@ -7,10 +7,12 @@
     <div class="field">
       <%= f.label :email %><br/>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= render "shared/form_error", errors: f.object.errors, field: :email %>
+
     </div>
 
     <div class="actions">
-      <%= f.submit "Send me reset password instructions" %>
+      <%= f.submit "Send me reset password instructions", class: "btn log" %>
     </div>
   <% end %>
 
