@@ -35,4 +35,15 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
   end
+
+  describe "Associations" do
+
+    it "Should have 5 expense according to ./spec/support/data_helper_spec" do
+      expect(@user.expenses.length).to eq(5)
+    end
+
+    it "Should have 3 Category according to ./spec/support/data_helper_spec" do
+      expect(@user.groups.length).to eq(3)
+    end
+  end
 end
