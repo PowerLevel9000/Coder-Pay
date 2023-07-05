@@ -1,14 +1,14 @@
 <%= link_to expense_path(expense), id: "expense-card" do %>
-<div class="d-flex justify-content-between mb-3">
-    <div class="w-25 text-center">
+<div class="d-flex justify-content-between my-5">
+    <div class="text-center w-25">
     <%= expense.amount %>
     </div>
-    <div class="w-50">
+    <div>
         <h4><%=expense.name%></h4>
-        <span><%= expense.created_at %></span>
+        <span><%= expense.created_at.strftime('%e %B %Y') %></span>
     </div>
-    <span class="w-25 text-center">
-    <%= "" %>
+    <span class="text-center w-25 me-3">
+    <%= expense.added_group %> Category
     <span>
 </div>
 <% end %>

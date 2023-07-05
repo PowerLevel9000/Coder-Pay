@@ -1,6 +1,5 @@
-
 <% @expenses.each do |expense| %>
-    <%= render "shared/expense_card", expense:expense %>
+  <%= render "shared/expense_card", expense: expense %>
 <% end %>
 
-<%= link_to "Add Expense", new_expense_path %>
+<%= render "shared/add_button", label: "Add Expense", path: new_expense_path %>

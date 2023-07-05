@@ -19,15 +19,15 @@
       <div class="modal-body">
 
         <% if data.empty? %>
-          <h5 class="text-info">You don't have any update Expense yet or All already added</h5>
+          <h5 class="text-info">You don't have any Catagory yet or All used already</h5>
         <% else %>
           <% data.each do |item| %>
             <div class="d-flex">
               <h4><%= item.name %></h4>
               <%= button_to "Button Text",
-              add_expense_group_path(@group, item),
+              add_group_expense_path(@expense, item),
               method: :post,
-              class: "button-class",
+              class: "button-class mx-5 btn",
               disable_with: "Processing..." %>
             </div>
           <% end %>
@@ -35,7 +35,7 @@
       </div>
       <div class="modal-footer">
         <% if data.empty? %>
-          <%= link_to "Add one", new_expense_path, class: "btn add" %>
+          <%= link_to "Add one", new_group_path, class: "btn add" %>
         <% end %>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>

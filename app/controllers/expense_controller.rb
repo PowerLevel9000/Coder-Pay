@@ -3,6 +3,12 @@ class ExpenseController < ApplicationController
     @expenses = Expense.all.order(created_at: :asc)
   end
 
+  def show
+    @expense = Expense.find(params[:id])
+    @expense_groups = @expense.groups
+    @groups = Group.where.not(id: @expense.groups.pluck(:id))
+  end
+
   def new
     @expense = Expense.new
   end
@@ -25,9 +31,10 @@ class ExpenseController < ApplicationController
   end
   
 
-  def add_group
-    @expense = Group.find(params[:id])
-    @group = Group.find(params[:id])
+  def add_expense
+    @expense = Expense.find(params[:id])
+    format = params[:format]
+    @group = Group.find(format.to_i) 
     @expense.add_unique_group(@group)
     redirect_to group_path(@group)
   end

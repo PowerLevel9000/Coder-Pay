@@ -3,4 +3,4 @@
     <%= render "shared/group_card", group:group %>
 <% end %>
 
-<%= link_to "Add Catogary", new_group_path %>
+<%= render "shared/add_button", label: "Add Category", path: new_group_path  %>
