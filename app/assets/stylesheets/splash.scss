@@ -89,3 +89,15 @@
         color: $primary-text-color;
     }
 }
+
+.card-group {
+    background-color: white;
+    align-items: center;
+    width: 95% !important;
+    margin: auto;
+    padding: 1rem;
+}
+
+.border {
+    border: 1px solid $primary-text-shade-light;
+}
