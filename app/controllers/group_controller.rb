@@ -3,6 +3,10 @@ class GroupController < ApplicationController
     @groups = Group.all
   end
 
+  def show
+    @group = Group.includes(:expenses).find(params[:id])
+  end
+
   def new
     @group = Group.new
   end
@@ -10,7 +14,8 @@ class GroupController < ApplicationController
   def create 
     @group = Group.new(
       user_id: current_user.id,
-      name: group_params[:name]
+      name: group_params[:name],
+      icon: group_params[:icon]
     )
     
     respond_to do |format|

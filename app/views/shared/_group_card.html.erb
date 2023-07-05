@@ -1,0 +1,14 @@
+<%= link_to group_path(group), id: "group-card" do %>
+<div class="d-flex justify-content-between mb-3">
+    <div class="w-25 text-center">
+    <%= "#{group.icon}".html_safe %>
+    </div>
+    <div class="w-50">
+        <h4><%=group.name%></h4>
+        <span><%= group.created_at %></span>
+    </div>
+    <span class="w-25 text-center">
+    <%= group.group_expense %>
+    <span>
+</div>
+<% end %>

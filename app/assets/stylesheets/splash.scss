@@ -2,7 +2,7 @@
 
 .splash {
     width: 100%;
-    min-height: calc(100vh - 2rem);
+    min-height: calc(100vh - 4rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,5 +42,18 @@
     &:hover {
         background-color: $primary-text-color;
         color: white !important;
+    }
+}
+
+.navbar {
+    background-color: $primary-color !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    color: white;
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: white;
     }
 }
