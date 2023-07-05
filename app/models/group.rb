@@ -11,6 +11,10 @@ class Group < ApplicationRecord
 
   # methods
 
+  def add_unique_expense(expense)
+    expenses << expense unless expenses.include?(expense)
+  end
+
   def group_expense
     total = 0
     self.expenses.each do |expense|

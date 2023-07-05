@@ -1,0 +1,14 @@
+<%= link_to expense_path(expense), id: "expense-card" do %>
+<div class="d-flex justify-content-between mb-3">
+    <div class="w-25 text-center">
+    <%= expense.amount %>
+    </div>
+    <div class="w-50">
+        <h4><%=expense.name%></h4>
+        <span><%= expense.created_at %></span>
+    </div>
+    <span class="w-25 text-center">
+    <%= "" %>
+    <span>
+</div>
+<% end %>

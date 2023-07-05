@@ -1,2 +1,6 @@
-<h1>Expense#index</h1>
-<p>Find me in app/views/expense/index.html.erb</p>
+
+<% @expenses.each do |expense| %>
+    <%= render "shared/expense_card", expense:expense %>
+<% end %>
+
+<%= link_to "Add Expense", new_expense_path %>

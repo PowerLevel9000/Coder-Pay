@@ -4,7 +4,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :group
+  resources :group do
+    member do
+      post 'add_expense', to: 'group#add_expense'
+    end
+  end
   resources :expense
   root to: "splash#index"
+  
 end

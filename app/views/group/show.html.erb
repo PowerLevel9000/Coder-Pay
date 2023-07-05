@@ -1,1 +1,8 @@
+<div class="d-flex align-items-center justify-content-between m-4">
+  <%= link_to "Back", :back, class: "btn btn-secondary", type: "button" %>
+  <button class="btn Add" data-bs-toggle="modal" data-bs-target="#add">
+    Add Expense
+  </button>
+  <%= render "shared/modal", data: @expenses, title: "Select Expenses To Add", url: group_path(@group), method: :put, group: @group %>
+</div>
 <%= render "shared/group_card", group: @group %>

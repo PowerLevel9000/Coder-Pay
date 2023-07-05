@@ -1,10 +1,12 @@
 class GroupController < ApplicationController
   def index
-    @groups = Group.all
+    @groups = Group.all.order(created_at: :asc)
   end
 
   def show
     @group = Group.includes(:expenses).find(params[:id])
+    @group_expenses = @group.expenses
+    @expenses = Expense.where.not(id: @group.expenses.pluck(:id))
   end
 
   def new
@@ -20,16 +22,25 @@ class GroupController < ApplicationController
     
     respond_to do |format|
       if @group.save 
-        format.html { redirect_to group_index_path, notice: 'Group was successfully created.'}
+        format.html { redirect_to group_path(@group), notice: 'Group was successfully created.'}
       else
         format.html { render :new, status: :unprocessable_entity, alert: "Something went wrong" }
       end
     end
   end
 
+  def add_expense
+    @group = Group.find(params[:id])
+    format = params[:format]
+    @expense = Expense.find(format.to_i) 
+    @group.add_unique_expense(@expense)
+    redirect_to expense_path(@group), notice: 'Expense updated Successfully'
+  end
+
+
   private 
 
   def group_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:group).permit(:name, :icon, expenses: [])
   end
 end
