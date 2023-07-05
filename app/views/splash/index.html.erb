@@ -1,6 +1,8 @@
-<h1>CoderPay</h1>
+<div class="splash">
+    <h1>Coder Pay</h1>
 
-<div>
-    <%= link_to "Log in", new_user_session_path %>
-    <%= link_to "sign in", new_user_registration_path %>
+    <div class = "log-in-container">
+        <%= link_to "Log in", new_user_session_path, class: "button-splash btn log" %>
+        <%= link_to "sign in", new_user_registration_path, class: "button-splash btn" %>
+    </div>
 </div>
