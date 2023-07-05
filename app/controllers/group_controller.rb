@@ -13,18 +13,18 @@ class GroupController < ApplicationController
     @group = Group.new
   end
 
-  def create 
+  def create
     @group = Group.new(
       user_id: current_user.id,
       name: group_params[:name],
       icon: group_params[:icon]
     )
-    
+
     respond_to do |format|
-      if @group.save 
-        format.html { redirect_to group_path(@group), notice: 'Group was successfully created.'}
+      if @group.save
+        format.html { redirect_to group_path(@group), notice: 'Group was successfully created.' }
       else
-        format.html { render :new, status: :unprocessable_entity, alert: "Something went wrong" }
+        format.html { render :new, status: :unprocessable_entity, alert: 'Something went wrong' }
       end
     end
   end
@@ -32,13 +32,12 @@ class GroupController < ApplicationController
   def add_expense
     @group = Group.find(params[:id])
     format = params[:format]
-    @expense = Expense.find(format.to_i) 
+    @expense = Expense.find(format.to_i)
     @group.add_unique_expense(@expense)
     redirect_to expense_path(@group), notice: 'Expense updated Successfully'
   end
 
-
-  private 
+  private
 
   def group_params
     params.require(:group).permit(:name, :icon, expenses: [])

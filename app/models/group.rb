@@ -17,7 +17,7 @@ class Group < ApplicationRecord
 
   def group_expense
     total = 0
-    self.expenses.each do |expense|
+    expenses.each do |expense|
       total += expense.amount
     end
     total

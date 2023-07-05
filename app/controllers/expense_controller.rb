@@ -12,7 +12,7 @@ class ExpenseController < ApplicationController
   def new
     @expense = Expense.new
   end
-  
+
   def create
     @expense = Expense.new(
       author_id: current_user.id,
@@ -22,26 +22,24 @@ class ExpenseController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_path(@expense), notice: "Expense Created Succesfuly" }
+        format.html { redirect_to expense_path(@expense), notice: 'Expense Created Succesfuly' }
       else
-        format.html { render :new, status: :unprocessable_entity, alert: "Something went wrong" }
+        format.html { render :new, status: :unprocessable_entity, alert: 'Something went wrong' }
       end
     end
-    
   end
-  
 
   def add_expense
     @expense = Expense.find(params[:id])
     format = params[:format]
-    @group = Group.find(format.to_i) 
+    @group = Group.find(format.to_i)
     @expense.add_unique_group(@group)
     redirect_to group_path(@group)
   end
 
   private
 
-  def expense_params 
+  def expense_params
     params.require(:expense).permit(:name, :amount)
   end
 end

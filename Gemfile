@@ -75,4 +75,4 @@ end
 
 gem 'devise', '~> 4.9'
 
-gem "erb-formatter", "~> 0.4.3"
+gem 'erb-formatter', '~> 0.4.3'

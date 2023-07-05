@@ -18,7 +18,7 @@
       <%= render "shared/form_error", errors: f.object.errors, field: :password %>
     </div>
 
-    <div class="field">
+    <div class="field mb-3">
       <%= f.label :password_confirmation, "Confirm new password", class: "form-label" %><br/>
       <%= f.password_field :password_confirmation,
                        autocomplete: "new-password",
@@ -28,7 +28,7 @@
       field: :password_confirmation %>
     </div>
 
-    <div class="actions">
+    <div class="actions mb-3">
       <%= f.submit "Change my password", class: "btn log" %>
     </div>
   <% end %>
