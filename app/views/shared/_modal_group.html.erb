@@ -24,10 +24,10 @@
           <% data.each do |item| %>
             <div class="d-flex justify-content-between">
               <h4><%= item.name %></h4>
-              <%= button_to "add",
+              <%= button_to "Add",
               add_group_expense_path(params: @expense.id, format: item.id),
               method: :post,
-              class: " mx-5 btn button-class",
+              class: " mx-5 btn button-class mb-2",
               disable_with: "Processing...",
               id: item.name
               %>

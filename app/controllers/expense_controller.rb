@@ -35,7 +35,7 @@ class ExpenseController < ApplicationController
     @expense = Expense.find(params[:id])
     @group = Group.find(params[:format])
     @expense.add_unique_group(@group)
-    redirect_to group_path(@group)
+    redirect_to expense_path(@expense)
   end
 
   private

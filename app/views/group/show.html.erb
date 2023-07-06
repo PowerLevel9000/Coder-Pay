@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center justify-content-between m-4">
-  <%= link_to "Back", :back, class: "btn btn-secondary", type: "button" %>
+  <%= link_to "Back", group_index_path, class: "btn btn-secondary", type: "button" %>
   <button class="btn add" data-bs-toggle="modal" data-bs-target="#add">
     Add Expense
   </button>
@@ -11,7 +11,7 @@
   group: @group %>
 </div>
 <%= render "shared/group_card", group: @group %>
-<table class="table mx-auto">
+<table class="table mx-auto table-striped bg-light table-hover">
   <thead>
     <tr>
       <th scope="col">S.No</th>

@@ -24,7 +24,7 @@
           <% data.each do |item| %>
             <div class="d-flex justify-content-between mb-2">
               <h4><%= item.name %></h4>
-              <%= button_to "Button Text",
+              <%= button_to "Add",
               add_expense_group_path(params: @group.id, format: item.id),
               method: :post,
               class: "button-class btn mx-5",

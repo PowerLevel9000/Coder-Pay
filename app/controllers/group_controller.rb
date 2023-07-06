@@ -35,7 +35,7 @@ class GroupController < ApplicationController
     @group = Group.find(params[:id])
     @expense = Expense.find(params[:format])
     @group.add_unique_expense(@expense)
-    redirect_to expense_path(@expense), notice: 'Expense updated Successfully'
+    redirect_to group_path(@group), notice: 'Expense updated Successfully'
   end
 
   private
