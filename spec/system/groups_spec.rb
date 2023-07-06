@@ -1,27 +1,27 @@
 require 'rails_helper'
 
-RSpec.describe "Groups", type: :system do
-  before :all do   
-    if User.find_by(name: "Adarsh Pathak").present?
-      @user = User.find_by(name: "Adarsh Pathak")
+RSpec.describe 'Groups', type: :system do
+  before :all do
+    if User.find_by(name: 'Adarsh Pathak').present?
+      @user = User.find_by(name: 'Adarsh Pathak')
     else
       data
       puts "\n ********************************************************"
-      puts "           Please Try Again As Data is Loaded              "
+      puts '           Please Try Again As Data is Loaded              '
       puts "*********************************************************\n"
     end
   end
-  
-  it "User can see there Catogary on the page but not others" do
+
+  it 'User can see there Catogary on the page but not others' do
     log_in_adarsh
     @user.groups.each do |group|
       expect(page).to have_content(group.name)
       expect(page).to have_content(group.group_expense)
     end
-    expect(page).not_to have_content("Enjoyment")
+    expect(page).not_to have_content('Enjoyment')
   end
 
-  it "Category Page Should have button or link for Add Category for user" do
+  it 'Category Page Should have button or link for Add Category for user' do
     log_in_adarsh
     expect(page).to have_content('Add Category')
     click_link 'Add Category'
@@ -42,7 +42,7 @@ RSpec.describe "Groups", type: :system do
     end
   end
 
-  it "allows adding expenses from the show page" do 
+  it 'allows adding expenses from the show page' do
     log_in_adarsh
     click_link 'Electric'
     click_button 'Add Expense'
@@ -50,5 +50,4 @@ RSpec.describe "Groups", type: :system do
     find_button('x-box').click
     expect(page).to have_content('Expense updated Successfully')
   end
-  
 end
