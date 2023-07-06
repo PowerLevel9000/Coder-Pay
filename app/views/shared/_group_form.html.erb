@@ -9,7 +9,7 @@
     <%= f.select :icon,
              options_for_select(select_emogi),
              prompt: "Select the option",
-             class: "form-control form-control-sm" %>
+             class: "form-select" %>
     <%= render "shared/form_error", errors: f.object.errors, field: :icon %>
   </div>
 

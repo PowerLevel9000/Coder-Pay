@@ -22,12 +22,12 @@
           <h5 class="text-info">You don't have any Catagory yet or All used already</h5>
         <% else %>
           <% data.each do |item| %>
-            <div class="d-flex">
+            <div class="d-flex justify-content-between">
               <h4><%= item.name %></h4>
-              <%= button_to "Button Text",
-              add_group_expense_path(@expense, item),
+              <%= button_to "add",
+              add_group_expense_path(params: @expense.id, format: item.id),
               method: :post,
-              class: "button-class mx-5 btn",
+              class: " mx-5 btn button-class",
               disable_with: "Processing...",
               id: item.name
               %>
