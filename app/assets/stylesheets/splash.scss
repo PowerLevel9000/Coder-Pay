@@ -1,0 +1,108 @@
+@import 'common';
+
+.splash {
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    text-transform: uppercase;
+    margin: auto 0;
+    font-weight: 800;
+  }
+
+  .log-in-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 5px;
+    width: 100%;
+
+    a {
+      width: 90%;
+      text-align: center;
+      color: $primary-text-shade-light;
+      padding: 1rem 0;
+
+      &:hover {
+        background-color: $primary-text-color;
+        color: white !important;
+      }
+    }
+  }
+}
+
+.log {
+  background-color: $primary-color;
+  color: white !important;
+
+  &:hover {
+    background-color: $primary-text-color;
+    color: white !important;
+  }
+}
+
+.button {
+  background-color: $secondary-color;
+}
+
+.navbar {
+  background-color: $primary-color !important;
+  margin: 0 !important;
+  padding: 1rem 0 !important;
+  color: white;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-group,
+  .table {
+    width: 75% !important;
+  }
+}
+
+.add {
+  background-color: $secondary-color;
+  color: white;
+
+  &:hover {
+    background-color: lighten($secondary-color, 20%);
+    color: $primary-text-color;
+  }
+}
+
+.button-class {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: lighten($primary-color, 20%);
+    color: $primary-text-color;
+  }
+}
+
+.card-group {
+  background-color: white;
+  align-items: center;
+  width: 95% !important;
+  margin: auto;
+  padding: 1rem;
+}
+
+.border {
+  border: 1px solid $primary-text-shade-light;
+}
+
+.table {
+  width: 95%;
+}
