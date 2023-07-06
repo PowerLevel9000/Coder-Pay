@@ -18,7 +18,7 @@
   - [Usage](#usage)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
-- [👁️ Presentation And Live link for Project](#video-presentation-for-our-project)
+- [👁️ Presentation And for Project](#video-presentation-for-our-project)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
