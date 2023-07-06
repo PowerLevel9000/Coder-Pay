@@ -11,7 +11,7 @@ def data
   @group_one = Group.create(name: 'Electric', icon: 'Bulb', user_id: @user_one.id)
   @group_one = Group.create(name: 'House', icon: 'home', user_id: @user_one.id)
   @group_shubham = Group.create(name: 'Enjoyment', icon: 'enjoy', user_id: @user_two.id)
-  @group_shubham = Expense.create(name: 'Enjoyment', amount: 50, user_id: @user_two.id)
+  @group_shubham = Expense.create(name: 'Enjoyment', amount: 50, author_id: @user_two.id)
 end
 
 # log in

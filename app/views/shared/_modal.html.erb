@@ -22,15 +22,14 @@
           <h5 class="text-info">You don't have any update Expense yet or All already added</h5>
         <% else %>
           <% data.each do |item| %>
-            <div class="d-flex">
+            <div class="d-flex justify-content-between mb-2">
               <h4><%= item.name %></h4>
-              <%= button_to "Button Text",
-              add_expense_group_path(@group, item),
+              <%= button_to "Add",
+              add_expense_group_path(params: @group.id, format: item.id),
               method: :post,
-              class: "button-class",
+              class: "button-class btn mx-5",
               disable_with: "Processing...",
-              id: item.name
-              %>
+              id: item.name %>
             </div>
           <% end %>
         <% end %>

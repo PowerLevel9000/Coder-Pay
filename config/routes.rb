@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   resources :expense do
     member do
-      post 'add_group', to: 'expense#add_expense'
+      post 'add_group', to: 'expense#add_group'
     end
   end
   root to: "splash#index"

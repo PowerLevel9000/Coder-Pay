@@ -18,7 +18,7 @@
   - [Usage](#usage)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
-- [👁️ Presentation And Live link for Project](#video-presentation-for-our-project)
+- [👁️ Presentation And for Project](#video-presentation-for-our-project)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -178,7 +178,7 @@ npx stylelint "**/*.{css,scss}" //=> for CSS or SASS file linting
 
 # 👁️ Presentation for Project <a name="video-presentation-for-our-project"></a>
 
-[presentation-video](https://youtu.be/OCLadxqMB7U)
+[presentation-video](https://www.loom.com/share/b04c3ad59dfe48dd815ec3fea429811a?sid=650fc5a1-3032-4d22-83bd-eb8d468a72c5)
 
 <!-- FUTURE FEATURES -->
 
