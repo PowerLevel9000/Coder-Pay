@@ -178,7 +178,9 @@ npx stylelint "**/*.{css,scss}" //=> for CSS or SASS file linting
 
 # 👁️ Presentation for Project <a name="video-presentation-for-our-project"></a>
 
-[presentation-video](https://www.loom.com/share/b04c3ad59dfe48dd815ec3fea429811a?sid=650fc5a1-3032-4d22-83bd-eb8d468a72c5)
+[Live link ⚒️🏋️](https://coderpay.onrender.com)
+
+[presentation-video 👁️](https://www.loom.com/share/b04c3ad59dfe48dd815ec3fea429811a?sid=650fc5a1-3032-4d22-83bd-eb8d468a72c5)
 
 <!-- FUTURE FEATURES -->
 
@@ -218,6 +220,8 @@ If you like this project please give it star or buy a coffee for us
 I would like to thank microverse for giving this opportunity to show up my skills
 
 and the <a href="https://guides.rubyonrails.org/getting_started.html"> Ruby on rails docs </a>
+
+moving further I want to thank [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) the [author of the original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for App Inspiration
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
