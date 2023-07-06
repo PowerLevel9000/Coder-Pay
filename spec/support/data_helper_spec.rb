@@ -11,6 +11,7 @@ def data
     @group_one = Group.create(name: "Electric", icon: "Bulb", user_id: @user_one.id)
     @group_one = Group.create(name: "House", icon: "home", user_id: @user_one.id)
     @group_shubham = Group.create(name: "Enjoyment", icon: "enjoy", user_id: @user_two.id)
+    @group_shubham = Expense.create(name: "Enjoyment", amount: 50, user_id: @user_two.id)
 end
 
 # log in 
@@ -23,12 +24,13 @@ def log_in_adarsh
     click_button 'Log in'
 end
 
-def Category_xbox
+def category_xbox
     @category_one = Group.find_by(name: "Electric")
     @category_two = Group.find_by(name: "shoping")
     @xbox = Expense.find_by(name: "x-box")
     @xbox.add_unique_group(@category_one)
     @xbox.add_unique_group(@category_two)
+    return @xbox
 end
 
 def shoping_expense

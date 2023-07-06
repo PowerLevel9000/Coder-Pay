@@ -27,7 +27,7 @@ RSpec.describe "Devises", type: :system do
   
   
   it "User can log in the Page" do
-    click_button 'Log in'
+    log_in_adarsh
     expect(page).to have_content 'Signed in successfully.'
   end
 
