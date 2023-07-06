@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center justify-content-between m-4 ">
-  <%= link_to "Back", :back, class: "btn btn-secondary", type: "button" %>
+  <%= link_to "Back", expense_index_path, class: "btn btn-secondary", type: "button" %>
   <button class="btn add" data-bs-toggle="modal" data-bs-target="#add">
     Add Group
   </button>
@@ -8,7 +8,7 @@
   title: "Add Category for the Expense" %>
 </div>
 <%= render "shared/expense_card", expense: @expense %>
-<table class="table mx-auto p-lg-5">
+<table class="table mx-auto p-lg-5 table-striped bg-light p-2 table-hover">
   <thead>
     <tr>
       <th scope="col">S.No</th>

@@ -9,7 +9,7 @@ class Expense < ApplicationRecord
 
   # Methods
   def added_group
-    groups.length
+    groups.length || 0
   end
 
   def add_unique_group(expense)

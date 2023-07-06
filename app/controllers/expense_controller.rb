@@ -31,12 +31,11 @@ class ExpenseController < ApplicationController
     end
   end
 
-  def add_expense
+  def add_group
     @expense = Expense.find(params[:id])
-    format = params[:format]
-    @group = Group.find(format.to_i)
+    @group = Group.find(params[:format])
     @expense.add_unique_group(@group)
-    redirect_to group_path(@group)
+    redirect_to expense_path(@expense)
   end
 
   private
