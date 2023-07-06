@@ -1,6 +1,8 @@
 class ExpenseController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @expenses = Expense.all.order(created_at: :asc)
+    @user = current_user
+    @expenses = @user.expenses.all.order(created_at: :asc)
   end
 
   def show
