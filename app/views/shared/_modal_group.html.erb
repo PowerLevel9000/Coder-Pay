@@ -28,7 +28,9 @@
               add_group_expense_path(@expense, item),
               method: :post,
               class: "button-class mx-5 btn",
-              disable_with: "Processing..." %>
+              disable_with: "Processing...",
+              id: item.name
+              %>
             </div>
           <% end %>
         <% end %>

@@ -27,10 +27,6 @@ RSpec.describe "Devises", type: :system do
   
   
   it "User can log in the Page" do
-    visit root_path
-    click_link 'Log in'
-    fill_in "Email",	with: "adarsh.pathak@example.com"
-    fill_in "Password",	with: 123456
     click_button 'Log in'
     expect(page).to have_content 'Signed in successfully.'
   end

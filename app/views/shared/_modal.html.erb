@@ -28,7 +28,9 @@
               add_expense_group_path(@group, item),
               method: :post,
               class: "button-class",
-              disable_with: "Processing..." %>
+              disable_with: "Processing...",
+              id: item.name
+              %>
             </div>
           <% end %>
         <% end %>
