@@ -25,7 +25,6 @@ RSpec.describe 'Devises', type: :system do
     expect(page).to have_content('Sign up')
   end
 
-
   it 'User can log in the Page' do
     log_in_adarsh
     expect(page).to have_content 'Signed in successfully.'
