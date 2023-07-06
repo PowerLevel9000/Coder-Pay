@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "Validation" do
+  describe "User Model Validation" do
 
     it "Name can't be blank or nil" do
       @user.name = nil
